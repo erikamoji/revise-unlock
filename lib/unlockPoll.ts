@@ -1,8 +1,15 @@
+import dotenv from 'dotenv';
 import Web3 from 'web3';
 import nodemailer from 'nodemailer';
 
+// Load environment variables from .env.local file
+dotenv.config();
+
+// Now you can use process.env to access your environment variables:
+const infuraProjectId = process.env.INFURA_PROJECT_ID;
+
 // Step 1: Instantiate web3 instance connected to a provider
-const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"));
+const web3 = new Web3(new Web3.providers.HttpProvider(`https://mainnet.infura.io/v3/${infuraProjectId}`));
 
 // Step 2: Create contract instance
 const lockManagerABI = [/* ...provided ABIs... */];

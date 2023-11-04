@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import Web3 from 'web3';
 import nodemailer from 'nodemailer';
+import { LockManagerABI } from './LockManagerABI';
 
 // Load environment variables from .env.local file
 dotenv.config();
@@ -12,9 +13,8 @@ const infuraProjectId = process.env.INFURA_PROJECT_ID;
 const web3 = new Web3(new Web3.providers.HttpProvider(`https://mainnet.infura.io/v3/${infuraProjectId}`));
 
 // Step 2: Create contract instance
-const lockManagerABI = [/* ...provided ABIs... */];
 const lockManagerAddress = "0x226124E83868812D3Dae87eB3C5F28047E1070B7";
-const lockManagerContract = new web3.eth.Contract(lockManagerABI, lockManagerAddress);
+const lockManagerContract = new web3.eth.Contract(LockManagerABI, lockManagerAddress);
 
 const fnftId = /* ...the FNFT ID you are interested in... */;
 

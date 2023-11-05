@@ -7,7 +7,7 @@ This service is designed to notify users via email when their Financial NFTs (FN
 - `subscribe.ts`: An API route that allows users to subscribe to notifications for specific FNFTs by providing their email and the FNFT ID.
 - `check-maturity.ts`: Contains logic to check the maturity of FNFTs against mock data and send email notifications using Mailgun.
 - `index.tsx`: The main page of the Next.js app where users can enter their email and FNFT ID to subscribe to notifications.
-- `notify.ts` (To be implemented): An API route that will be called by the separate Node.js event listener to trigger email notifications for matured FNFTs.
+- `notify.ts`: An API route that will be called by the separate Node.js event listener to trigger email notifications for matured FNFTs.
 - Mailgun: An email delivery service used to send out notifications. This service integrates with the Mailgun API to dispatch emails.
 
 ## Local Development Setup
@@ -37,7 +37,7 @@ This file contains two key functions:
 
 The main frontend component where users input their details to subscribe to notifications. It interacts with the `subscribe.ts` API route.
 
-## Future Production Implementation
+## Production Implementation
 
 ### `notify.ts`
 

@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 
   const subscribeToNotifications = async () => {
     try {
-      const response = await axios.post('http://localhost:3001/subscribe', { email, fnftId });
+      const response = await axios.post('http://localhost:3000/api/subscribe', { email, fnftId });
       console.log('Subscription successful', response.data);
     } catch (error) {
       console.error('Subscription failed', error);

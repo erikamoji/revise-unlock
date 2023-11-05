@@ -6,8 +6,7 @@
     "start": "next start",
     "dev": "next dev",
     "build": "next build",
-    "lint": "next lint",
-    "start-backend": "node backend/server.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.2.3",

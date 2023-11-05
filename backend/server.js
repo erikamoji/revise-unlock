@@ -1,6 +1,8 @@
 // TypeScript requires types, install the necessary types for Express and Node if you haven't already:
 // npm install --save @types/express @types/node nodemailer
 
+// do not use this backend, we are using nextjs api instead
+
 import express from 'express';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
